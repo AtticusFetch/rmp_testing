@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1
+      className="App-title"
+    >
+      Welcome to React
+    </h1>
+  </header>
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Fetch Data
+  </button>
+  <input
+    onChange={[Function]}
+  />
+  <Component
+    value="some_value"
+  />
+  <div>
+    <br />
+    <span
+      id="data"
+    >
+      Data: 
+    </span>
+  </div>
+  <br />
+  <div>
+    <span
+      id="isfetched"
+    >
+      isFetched: 
+      false
+    </span>
+  </div>
+  <br />
+  <div>
+    <span
+      id="timeout"
+    >
+      timeoutDone: 
+      false
+    </span>
+  </div>
+</div>
+`;

@@ -18,15 +18,17 @@ class App extends Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.group('componentWillUpdate');
-    console.log('old state', this.state);
-    console.log('new state', nextState);
-    console.groupEnd();
+    // console.group('componentWillUpdate');
+    // console.log('old state', this.state);
+    // console.log('new state', nextState);
+    // console.groupEnd();
   }
 
   _asyncMethod = () => {
     fetchSome(this.state.data)
-      .then(fetchedData => this.setState({ data: fetchedData, isFetched: true }))
+      .then(fetchedData => {
+        this.setState({ data: fetchedData, isFetched: true });
+      })
       .catch(error => this.setState({ error }));
   };
 
@@ -43,9 +45,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <br />
-        <button onClick={this._asyncMethod}>Fetch Data</button>
+        <button onClick={this.props._asyncMethod}>Fetch Data</button>
         <input onChange={this._setData} />
-        <SomeComp value="somp_value" />
+        <SomeComp value="some_value" />
         <div>
           <br />
           <span id="data">Data: </span>{this.state.data && <span>{this.state.data}</span>}
